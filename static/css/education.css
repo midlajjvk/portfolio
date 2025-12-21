@@ -1,0 +1,92 @@
+/* ===== EDUCATION SECTION ===== */
+.education {
+    padding: 10px 8% 10px;
+    background: black;
+}
+
+/* Title */
+.education-title {
+    text-align: center;
+    font-size: 3.5rem;
+    color: #fcfcfc;
+    margin-bottom: 5rem;
+}
+
+/* Card */
+.education-card {
+    display: grid;
+    grid-template-columns: 1.3fr 0.6fr 2fr;
+    align-items: center;
+
+    background: #ff2b2b;
+    border: 3px solid white;
+    border-radius: 25px;
+
+    padding: 3rem 4rem;
+    margin-bottom: 4rem;
+}
+
+/* Left */
+.edu-left h3 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: white;
+}
+
+.edu-left p {
+    font-size: 1.4rem;
+    margin: 0.6rem 0;
+    color: white;
+}
+
+.edu-left span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* Center logo */
+.edu-center {
+    display: flex;
+    justify-content: center;
+}
+
+.edu-center img {
+    width: 90px;
+    height: auto;
+}
+
+/* Right */
+.edu-right p {
+    font-size: 1.4rem;
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+    .education {
+        padding: 70px 6%;
+    }
+
+    .education-title {
+        font-size: 2.6rem;
+    }
+
+    .education-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 2.5rem;
+        gap: 2rem;
+    }
+
+    .edu-center img {
+        width: 70px;
+    }
+
+    .edu-right p {
+        font-size: 1.3rem;
+    }
+}

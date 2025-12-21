@@ -1,0 +1,135 @@
+.projects-list {
+    padding: 10px 8% 10px;
+    background: black;
+}
+.projects-title {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 5rem;
+}
+
+.projects-title-main {
+    color: white;
+}
+
+.projects-title-accent {
+    color: #b74b4b;
+}
+
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.project-card {
+    padding: 1.5rem;
+
+    position: relative; /* IMPORTANT */
+
+    background: #000;
+    border: 2px solid #b74b4b;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-badge {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+
+    background: #b74b4b;
+    color: black;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: none; /* badge doesn't block click */
+}
+
+.project-card img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.project-card h3 {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    color: #b74b4b;
+}
+
+.project-card p {
+    font-size: 1.4rem;
+    margin: 0.8rem 0;
+}
+
+.project-card .tech {
+    font-size: 2.2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(183, 75, 75, 0.7);
+}
+.view-more-btn {
+    margin-top: 1.5rem;
+    padding: 0.6rem 1.6rem;
+
+    border: 1px solid #b74b4b;
+    border-radius: 20px;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #b74b4b;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.project-card:hover .view-more-btn {
+    background: #b74b4b;
+    color: black;
+}
+
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .project-card img {
+        height: 170px;
+    }
+    .project-badge {
+        width: 30px;
+        height: 30px;
+        font-size: 0.6rem;
+    }
+}

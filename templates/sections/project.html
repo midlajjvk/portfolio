@@ -1,0 +1,91 @@
+<section class="projects-list">
+
+    <h2 class="projects-title">
+        <span class="projects-title-main">My</span>
+        <span class="projects-title-accent">Projects</span>
+    </h2>
+    
+    
+    <div class="projects-grid">
+
+        <!-- Project Card -->
+        <a href="{{ url_for('project_detail', project_name='zaptask') }}" class="project-card">
+
+            <img src="{{ url_for('static', filename='images/zapTask.png') }}" alt="ZapTask">
+        
+            <h3>ZapTask</h3>
+            <p>Task Management App</p>
+        
+            <div class="tech">
+                <i class="devicon-flutter-plain"></i>
+                <i class="devicon-dart-plain"></i>
+            </div>
+        
+            <span class="view-more-btn">
+                View More <i class="fa-solid fa-arrow-right"></i>
+            </span>
+        
+            <!-- Badge -->
+            <span class="project-badge">Practice<br>Project</span>
+        
+        </a>
+        
+
+        <a href="{{ url_for('project_detail', project_name='influencehub') }}" class="project-card">
+
+            <img src="{{ url_for('static', filename='images/influencehub.png') }}" alt="ZapTask">
+        
+            <h3>InfluenceHub</h3>
+            <p>Influencer Marketing App</p>
+        
+            <div class="tech">
+                <i class="devicon-flutter-plain"></i>
+                <i class="devicon-dart-plain"></i>
+            </div>
+        
+            <span class="view-more-btn">
+                View More <i class="fa-solid fa-arrow-right"></i>
+            </span>
+            <span class="project-badge">Practice<br>Project</span>
+        </a>
+        
+        <a href="{{ url_for('project_detail', project_name='hooralbahr') }}" class="project-card">
+
+            <img src="{{ url_for('static', filename='images/hooralbahr.png') }}" alt="hooralbahr">
+        
+            <h3>Hoor al Bahr</h3>
+            <p>Menu Showcasing Webapp</p>
+        
+            <div class="tech">
+                <i class="devicon-python-plain"></i>
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+            </div>
+        
+            <span class="view-more-btn">
+                View More <i class="fa-solid fa-arrow-right"></i>
+            </span>
+            <span class="project-badge">Live<br>Project</span>
+        </a>
+   
+        <a href="{{ url_for('project_detail', project_name='scribe') }}" class="project-card">
+
+            <img src="{{ url_for('static', filename='images/scribe.png') }}" alt="scribe">
+        
+            <h3>Scribe</h3>
+            <p>Slot Booking Webapp</p>
+        
+            <div class="tech">
+                <i class="devicon-python-plain"></i>
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+            </div>
+        
+            <span class="view-more-btn">
+                View More <i class="fa-solid fa-arrow-right"></i>
+            </span>
+            <span class="project-badge">Practice<br>Project</span>
+        </a>
+   
+    </div>
+</section>

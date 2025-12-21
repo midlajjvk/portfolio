@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Messages</title>
+    <style>
+        body {
+            background: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+        h2 {
+            color: #b74b4b;
+        }
+        .message {
+            border: 1px solid #b74b4b;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .email {
+            font-weight: bold;
+            color: #ff4b4b;
+        }
+        .time {
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Received Messages</h2>
+{% if messages %}
+    {% for msg in messages %}
+        <div class="message">
+            <div class="email">{{ msg.email }}</div>
+            <p>{{ msg.message }}</p>
+            <div class="time">{{ msg.timestamp }}</div>
+
+            <!-- Delete Button -->
+            <form action="{{ url_for('delete_message', index=loop.index0) }}"
+                  method="post"
+                  style="margin-top: 10px;">
+                <button type="submit" class="delete-btn">
+                    Delete
+                </button>
+            </form>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No messages yet.</p>
+{% endif %}
+
+
+</body>
+</html>
