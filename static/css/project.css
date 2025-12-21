@@ -1,3 +1,11 @@
+#project {
+  scroll-margin-top: 120px;
+}
+
+section {
+    scroll-margin-top: 120px; /* match header height */
+  }
+  
 .projects-list {
     padding: 10px 8% 10px;
     background: black;
