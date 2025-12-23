@@ -1,48 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Midlaj | Portfolio</title>
+{% extends "base.html" %}
 
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #0f172a; /* dark professional */
-      font-family: Arial, Helvetica, sans-serif;
-      color: #ffffff;
-    }
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project-detail-hooralbahr.css') }}">
+{% endblock %}
 
-    .container {
-      text-align: center;
-    }
+{% block content %}
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
+<section class="project-detail">
 
-    h1 span {
-      color: #38bdf8; /* subtle accent */
-    }
+    <!-- HERO / COVER -->
+    <div class="project-hero">
+        <img src="{{ url_for('static', filename='images/hooralbahr.png') }}"
+             alt="Hoor Al Bahr Website">
+    </div>
 
-    p {
-      font-size: 1.2rem;
-      color: #cbd5f5;
-      letter-spacing: 1px;
-    }
-  </style>
-</head>
-<body>
+    <!-- TITLE -->
+    <h2 class="project-title">Hoor Al Bahr – Menu Showcasing Website</h2>
 
-  <div class="container">
-    <h1>Hi, I'm <span>Midlaj</span></h1>
-    <p>Flutter Developer | UI / UX</p>
+    <!-- DESCRIPTION -->
+    <p class="project-description">
+        Hoor Al Bahr is a modern menu showcasing website developed for a seafood
+        restaurant to display their food items, categories, and pricing in a clean
+        and visually appealing format. The website is designed to be lightweight,
+        fast, and responsive, making it ideal for in-store displays as well as
+        customer browsing on mobile devices.
+        <br><br>
+        The project is currently <strong>live and in use</strong> at
+        <a href="https://www.hooralbahr.com" target="_blank" style="color:#b74b4b;">
+            www.hooralbahr.com
+        </a>.
+    </p>
+
+    <!-- TECH + FEATURES -->
+    <div class="project-info-grid">
+
+        <!-- USED TECHNOLOGIES -->
+        <div class="project-info-block">
+            <h3 class="section-heading">Used Technologies</h3>
+            <ul class="tech-list">
+                <li>Python (Flask)</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+
+        <!-- FEATURES -->
+        <div class="project-info-block">
+            <h3 class="section-heading">Key Features</h3>
+            <ul class="feature-list">
+                <li>Clean and modern menu layout</li>
+                <li>Category-wise food listing</li>
+                <li>Optimized for TV and tablet displays</li>
+                <li>Mobile-friendly responsive design</li>
+                <li>Fast loading and easy navigation</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- DEMO VIDEO -->
+    <h3 class="section-heading">Screen Recorded Demo</h3>
+    <div class="video-wrapper">
+      <video controls preload="metadata">
+          <source src="{{ url_for('static', filename='videos/hooralbahr.mp4') }}" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
   </div>
+  
 
-</body>
-</html>
+    <!-- CHALLENGES -->
+    <h3 class="section-heading">Challenges & Learnings</h3>
+    <p class="project-description">
+        This project helped me understand real-world client requirements, especially
+        in designing a visually appealing interface for non-technical users.
+        I focused on performance optimization, responsive layouts, and presenting
+        menu data in a clear and engaging way suitable for restaurant environments.
+    </p>
+
+    <!-- BACK BUTTON -->
+    <div class="back-to-projects">
+        <a href="{{ url_for('index') }}#project" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i> Back to Projects
+        </a>
+    </div>
+
+</section>
+
+{% endblock %}
