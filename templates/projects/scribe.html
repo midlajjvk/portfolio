@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project-detail-scribe.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<section class="project-detail">
+
+    <!-- HERO / COVER -->
+    <div class="project-hero">
+        <img src="{{ url_for('static', filename='images/scribe.png') }}"
+             alt="Scribe Salon Booking App">
+    </div>
+
+    <!-- TITLE -->
+    <h2 class="project-title">SCRIBE – Salon Slot Booking Web App</h2>
+
+    <!-- DESCRIPTION -->
+    <p class="project-description">
+        Scribe is a web-based salon slot booking application designed to streamline
+        appointment scheduling for both customers and salon owners. The frontend is
+        built using HTML, CSS, and JavaScript to deliver a clean and responsive user
+        experience, while the backend uses Python (Flask) to manage bookings and
+        prevent scheduling conflicts.
+    </p>
+
+    <!-- TECH + FEATURES (SIDE BY SIDE) -->
+    <div class="project-info-grid">
+
+        <!-- USED TECHNOLOGIES -->
+        <div class="project-info-block">
+            <h3 class="section-heading">Used Technologies</h3>
+            <ul class="tech-list">
+                <li>Python (Flask)</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+
+        <!-- FEATURES -->
+        <div class="project-info-block">
+            <h3 class="section-heading">Key Features</h3>
+            <ul class="feature-list">
+                <li>Real-time slot availability</li>
+                <li>Prevents double booking</li>
+                <li>Easy appointment booking</li>
+                <li>Admin-friendly schedule management</li>
+                <li>Responsive design</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- SCREENSHOTS -->
+    <h3 class="section-heading">Screenshots</h3>
+    <div class="project-gallery">
+        <img src="{{ url_for('static', filename='images/projects/scribe/pic1.jpeg') }}">
+        <img src="{{ url_for('static', filename='images/projects/scribe/pic2.jpeg') }}">
+        <img src="{{ url_for('static', filename='images/projects/scribe/pic3.jpeg') }}">
+        <img src="{{ url_for('static', filename='images/projects/scribe/pic4.jpeg') }}">
+    </div>
+
+    <!-- DEMO VIDEO -->
+    <h3 class="section-heading">Demo Video</h3>
+    <div class="video-wrapper">
+        <video controls>
+            <source src="{{ url_for('static', filename='videos/scribe.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- LINKS -->
+    <div class="project-links">
+        <a href="https://github.com/midlajjvk/scribe"
+           target="_blank"
+           class="btn">
+            GitHub Repository
+        </a>
+
+        <a href="https://midlajjvk.pythonanywhere.com/"
+        target="_blank"
+        class="btn-outline">
+         Live Demo
+     </a>
+     
+    </div>
+
+    <!-- CHALLENGES -->
+    <h3 class="section-heading">Challenges & Learnings</h3>
+    <p class="project-description">
+        While developing Scribe, I focused on handling booking conflicts,
+        designing efficient backend routes, and ensuring a smooth user experience.
+        This project strengthened my understanding of full-stack development and
+        real-world business logic.
+    </p>
+    <div class="back-to-projects">
+        <a href="{{ url_for('index') }}#project" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i> Back to Projects
+        </a>
+    </div>
+    
+    
+</section>
+
+{% endblock %}

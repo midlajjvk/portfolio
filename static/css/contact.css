@@ -7,8 +7,8 @@
 /* Wrapper */
 .contact-wrapper {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    align-items: flex-start;  /* ✅ moves text upward */
+    grid-template-columns: 1.2fr 1fr 320px; /* 👈 message box column */
+    align-items: flex-start;
     gap: 5rem;
 }
 
@@ -64,26 +64,22 @@
     color: #ff2b2b;
 }
 /* ===== MESSAGE BOX ===== */
-.contact {
-    position: relative; /* IMPORTANT for absolute positioning */
+.contact-wrapper {
+    position: relative; /* anchor point */
 }
 
 .contact-message-box {
-    position: absolute;
-    right: 0;
-    bottom: 300px;   /* move upward */
-
-
-
     background: #111;
     border: 2px solid #ff2b2b;
     border-radius: 16px;
 
-    width: 300px;
+    width: 100%;
     padding: 1.6rem;
 
     box-shadow: 0 0 25px rgba(255, 43, 43, 0.4);
 }
+
+
 
 .contact-message-box h3 {
     font-size: 1.4rem;
