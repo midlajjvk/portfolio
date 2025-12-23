@@ -21,18 +21,21 @@
 
     <!-- ===== HEADER + MENU CSS ===== -->
     <style>
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 9999;
-            background: black;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem 8%;
-        }
+   header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: black;
+    transition: transform 0.35s ease-in-out;
+}
+
+/* When hidden */
+header.hide {
+    transform: translateY(-100%);
+}
+
 
         .logo {
             display: flex;
@@ -148,6 +151,24 @@
         link.addEventListener("click", () => {
             navMenu.classList.remove("active");
         });
+    });
+</script>
+<script>
+    let lastScrollY = window.scrollY;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", () => {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            // scrolling down
+            header.classList.add("hide");
+        } else {
+            // scrolling up
+            header.classList.remove("hide");
+        }
+
+        lastScrollY = currentScrollY;
     });
 </script>
 
