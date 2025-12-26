@@ -1,48 +1,118 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Midlaj | Portfolio</title>
+{% extends "base.html" %}
 
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #0f172a; /* dark professional */
-      font-family: Arial, Helvetica, sans-serif;
-      color: #ffffff;
-    }
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project-detail-influencehub.css') }}">
+{% endblock %}
 
-    .container {
-      text-align: center;
-    }
+{% block content %}
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
+<section class="project-detail">
 
-    h1 span {
-      color: #38bdf8; /* subtle accent */
-    }
-
-    p {
-      font-size: 1.2rem;
-      color: #cbd5f5;
-      letter-spacing: 1px;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="container">
-    <h1>Hi, I'm <span>Midlaj</span></h1>
-    <p>Flutter Developer | UI / UX</p>
+  <!-- HERO / COVER -->
+  <div class="project-hero">
+    <img src="{{ url_for('static', filename='images/zapTask.png') }}" alt="ZapTask App">
   </div>
 
-</body>
-</html>
+  <!-- TITLE -->
+  <h2 class="project-title">ZapTask – Task Management Application</h2>
+
+  <!-- DESCRIPTION -->
+  <p class="project-description">
+
+      ZapTask is a simple and efficient task management application designed to help users
+      organize their daily activities. The app focuses on clarity and ease of use, allowing
+      users to create and delete tasks without unnecessary complexity. Each task is linked
+      with a scheduled time, and when the time is reached, the app prompts the user with a
+      reminder message asking, “Have you done this task?”  
+      ZapTask also supports both dark and light themes, enabling users to switch between
+      modes based on their preference for a comfortable experience.
+  </p>
+
+
+  <!-- TECH + FEATURES (SIDE BY SIDE) -->
+  <div class="project-info-grid">
+
+    <!-- FEATURES -->
+    <div class="project-info-block">
+      <h3 class="section-heading">Key Features</h3>
+      <ul class="feature-list">
+        <li>
+            <strong>Create & Delete Tasks</strong>
+            <span>Users can easily add new tasks and remove completed or unwanted tasks.</span>
+        </li>
+    
+        <li>
+            <strong>No Task Editing</strong>
+            <span>Tasks are designed to be simple—once created, they can only be completed or deleted.</span>
+        </li>
+    
+        <li>
+            <strong>Timed Task Reminders</strong>
+            <span>Displays a reminder message like “Have you done this task?” when the scheduled time is reached.</span>
+        </li>
+    
+        <li>
+            <strong>Dark & Light Theme Support</strong>
+            <span>Allows users to switch between dark and light modes for better usability.</span>
+        </li>
+    
+        <li>
+            <strong>Clean & Minimal UI</strong>
+            <span>Focused on distraction-free task management with a simple interface.</span>
+        </li>
+    </ul>
+    
+    </div>
+
+    <!-- USED TECHNOLOGIES -->
+    <div class="project-info-block">
+      <h3 class="section-heading">Used Technologies</h3>
+      <ul class="tech-list">
+        <li>Flutter</li>
+        <li>Dart</li>
+        <li>Hive Local Storage</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- SCREENSHOTS -->
+  <h3 class="section-heading">Screenshots</h3>
+
+  <div class="project-gallery">
+    <img src="{{ url_for('static', filename='images/projects/zaptask/pic1.jpeg') }}" alt="ZapTask Screenshot 1">
+    <img src="{{ url_for('static', filename='images/projects/zaptask/pic2.jpeg') }}" alt="ZapTask Screenshot 2">
+    <img src="{{ url_for('static', filename='images/projects/zaptask/pic3.jpeg') }}" alt="ZapTask Screenshot 3">
+    <img src="{{ url_for('static', filename='images/projects/zaptask/pic4.jpeg') }}" alt="ZapTask Screenshot 4">
+    <img src="{{ url_for('static', filename='images/projects/zaptask/pic5.jpeg') }}" alt="ZapTask Screenshot 4">
+    <img src="{{ url_for('static', filename='images/projects/zaptask/pic6.jpeg') }}" alt="ZapTask Screenshot 4">
+
+  </div>
+
+  <!-- LINKS -->
+  <div class="project-links">
+    <a href="https://github.com/midlajjvk/zaptask" target="_blank" class="btn">
+      GitHub Repository
+    </a>
+  </div>
+
+  <!-- CHALLENGES -->
+  <div class="challenges-section">
+    <h3 class="section-heading">Challenges & Learnings</h3>
+    <p class="project-description">
+      Building ZapTask helped me understand state management in Flutter,
+      designing reusable UI components, and structuring scalable application
+      logic for real-world productivity apps.
+    </p>
+  </div>
+
+  <!-- BACK BUTTON -->
+  <div class="back-to-projects">
+    <a href="{{ url_for('index') }}#project" class="back-btn">
+      <i class="fa-solid fa-arrow-left"></i> Back to Projects
+    </a>
+  </div>
+
+</section>
+
+{% endblock %}

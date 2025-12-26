@@ -1,48 +1,118 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Midlaj | Portfolio</title>
+{% extends "base.html" %}
 
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #0f172a; /* dark professional */
-      font-family: Arial, Helvetica, sans-serif;
-      color: #ffffff;
-    }
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/project-detail-influencehub.css') }}">
+{% endblock %}
 
-    .container {
-      text-align: center;
-    }
+{% block content %}
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
+<section class="project-detail">
 
-    h1 span {
-      color: #38bdf8; /* subtle accent */
-    }
-
-    p {
-      font-size: 1.2rem;
-      color: #cbd5f5;
-      letter-spacing: 1px;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="container">
-    <h1>Hi, I'm <span>Midlaj</span></h1>
-    <p>Flutter Developer | UI / UX</p>
+  <!-- HERO / COVER -->
+  <div class="project-hero">
+    <img src="{{ url_for('static', filename='images/influencehub.png') }}" alt="InfluenceHub Web App">
   </div>
 
-</body>
-</html>
+  <!-- TITLE -->
+  <h2 class="project-title">InfluenceHub – Influencer Marketing Application
+  </h2>
+
+  <!-- DESCRIPTION -->
+  <p class="project-description">
+    InfluenceHub is an influencer marketing application that connects brands and influencers on a single platform.
+    Users can sign up either as a brand or an influencer, enabling seamless collaboration for marketing campaigns.
+    The application is built using Flutter and Dart, focusing on smooth user experience, real-time communication,
+    and scalable architecture.
+  </p>
+
+  <!-- TECH + FEATURES (SIDE BY SIDE) -->
+  <div class="project-info-grid">
+    <!-- FEATURES -->
+    <div class="project-info-block">
+      <h3 class="section-heading">Key Features</h3>
+      <ul class="feature-list">
+        <li>
+            <strong>User roles: Influencer & Brand</strong>
+            <span>Allows users to register and operate based on their role.</span>
+        </li>
+        <li>
+            <strong>Real-time chat system</strong>
+            <span>Enables instant communication between brands and influencers.</span>
+        </li>
+        <li>
+            <strong>Campaign collaboration workflow</strong>
+            <span>Simplifies campaign discussions and partnership coordination.</span>
+        </li>
+        <li>
+            <strong>Modern and intuitive UI</strong>
+            <span>Designed for smooth navigation and user-friendly experience.</span>
+        </li>
+        <li>
+            <strong>Cross-platform mobile support</strong>
+            <span>Runs seamlessly on both Android and iOS using Flutter.</span>
+        </li>
+    </ul>
+    
+
+    </div>
+    <!-- USED TECHNOLOGIES -->
+    <div class="project-info-block">
+      <h3 class="section-heading">Used Technologies</h3>
+      <ul class="tech-list">
+        <li>Flutter</li>
+        <li>Dart</li>
+        <li>Firebase</li>
+      </ul>
+
+    </div>
+
+
+
+  </div>
+<!-- SCREENSHOTS -->
+<h3 class="section-heading">Screenshots</h3>
+
+<div class="project-gallery">
+    <img src="{{ url_for('static', filename='images/projects/influencehub/pic1.png') }}"
+         alt="InfluenceHub Screenshot 1">
+
+    <img src="{{ url_for('static', filename='images/projects/influencehub/pic2.png') }}"
+         alt="InfluenceHub Screenshot 2">
+
+    <img src="{{ url_for('static', filename='images/projects/influencehub/pic3.png') }}"
+         alt="InfluenceHub Screenshot 3">
+
+    <img src="{{ url_for('static', filename='images/projects/influencehub/pic4.png') }}"
+         alt="InfluenceHub Screenshot 4">
+         
+    <img src="{{ url_for('static', filename='images/projects/influencehub/pic5.png') }}"
+    alt="InfluenceHub Screenshot 4">
+</div>
+
+  <!-- LINKS -->
+  <div class="project-links">
+    <a href="https://github.com/midlajjvk/InfluenceHub" target="_blank" class="btn">
+      GitHub Repository
+    </a>
+  </div>
+
+  <!-- CHALLENGES -->
+  <div class="challenges-section">
+    <h3 class="section-heading">Challenges & Learnings</h3>
+    <p class="project-description">
+        This project helped me gain hands-on experience in building role-based applications,
+        designing scalable UI components, and implementing real-time communication using Flutter.
+    </p>
+</div>
+
+
+  <!-- BACK BUTTON -->
+  <div class="back-to-projects">
+    <a href="{{ url_for('index') }}#project" class="back-btn">
+      <i class="fa-solid fa-arrow-left"></i> Back to Projects
+    </a>
+  </div>
+
+</section>
+
+{% endblock %}
