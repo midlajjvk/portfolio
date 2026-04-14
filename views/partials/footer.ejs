@@ -1,0 +1,23 @@
+<script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+    menuToggle.addEventListener("click", () => navMenu.classList.toggle("active"));
+    document.querySelectorAll("#navMenu a").forEach(link => {
+        link.addEventListener("click", () => navMenu.classList.remove("active"));
+    });
+</script>
+<script>
+    let lastScrollY = window.scrollY;
+    const header = document.querySelector("header");
+    window.addEventListener("scroll", () => {
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            header.classList.add("hide");
+        } else {
+            header.classList.remove("hide");
+        }
+        lastScrollY = currentScrollY;
+    });
+</script>
+</body>
+</html>

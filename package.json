@@ -1,0 +1,20 @@
+{
+  "name": "portfolio-ts",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/ejs": "^3.1.5",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}

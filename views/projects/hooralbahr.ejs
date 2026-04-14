@@ -1,0 +1,71 @@
+<% const extraCss = '<link rel="stylesheet" href="/static/css/project-detail-hooralbahr.css">' %>
+<%- include('../partials/header') %>
+
+<section class="project-detail">
+
+    <div class="project-hero">
+        <img src="/static/images/hooralbahr.png" alt="Hoor Al Bahr Website">
+    </div>
+
+    <h2 class="project-title">Hoor Al Bahr – Menu Showcasing Website</h2>
+
+    <p class="project-description">
+        Hoor Al Bahr is a modern menu showcasing website developed for a seafood
+        restaurant to display their food items, categories, and pricing in a clean
+        and visually appealing format. The website is designed to be lightweight,
+        fast, and responsive, making it ideal for in-store displays as well as
+        customer browsing on mobile devices.
+        <br><br>
+        The project is currently <strong>live and in use</strong> at
+        <a href="https://www.hooralbahr.com" target="_blank" style="color:#b74b4b;">
+            www.hooralbahr.com
+        </a>.
+    </p>
+
+    <div class="project-info-grid">
+        <div class="project-info-block">
+            <h3 class="section-heading">Used Technologies</h3>
+            <ul class="tech-list">
+                <li>Python (Flask)</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+        <div class="project-info-block">
+            <h3 class="section-heading">Key Features</h3>
+            <ul class="feature-list">
+                <li>Clean and modern menu layout</li>
+                <li>Category-wise food listing</li>
+                <li>Optimized for TV and tablet displays</li>
+                <li>Mobile-friendly responsive design</li>
+                <li>Fast loading and easy navigation</li>
+            </ul>
+        </div>
+    </div>
+
+    <h3 class="section-heading">Screen Recorded Demo</h3>
+    <div class="video-wrapper">
+        <video controls preload="metadata">
+            <source src="/static/videos/hooralbahr.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <h3 class="section-heading">Challenges & Learnings</h3>
+    <p class="project-description">
+        This project helped me understand real-world client requirements, especially
+        in designing a visually appealing interface for non-technical users.
+        I focused on performance optimization, responsive layouts, and presenting
+        menu data in a clear and engaging way suitable for restaurant environments.
+    </p>
+
+    <div class="back-to-projects">
+        <a href="/#project" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i> Back to Projects
+        </a>
+    </div>
+
+</section>
+
+<%- include('../partials/footer') %>

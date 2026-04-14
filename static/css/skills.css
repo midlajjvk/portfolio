@@ -1,0 +1,171 @@
+/* ===== SKILLS SECTION ===== */
+.skills {
+    padding: 10px 10% 10px;
+        background: black;
+}
+
+/* Heading */
+.skills h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 5rem;
+
+}
+
+.skills-title-accent {
+    color: #b74b4b;
+
+}
+
+.skills-title-main {
+    color: #ffffff;
+
+}
+
+/* ===== GRID ===== */
+.skills-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* FORCE 3 columns */
+    gap: 4rem;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Skill tile */
+.skill-tile {
+    background: #000;
+    border: 2px solid #b74b4b;
+    border-radius: 18px;
+    height: 160px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-tile::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+
+    background: linear-gradient(120deg,
+            transparent 30%,
+            rgba(255, 255, 255, 0.184),
+            transparent 70%);
+
+    animation: borderGlaze 3.5s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes borderGlaze {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+.skill-tile i {
+    font-size: 4rem;
+    color: #b74b4b;
+}
+
+/* Hover */
+.skill-tile:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgba(183, 75, 75, 0.8);
+}
+
+/* Brand icon colors */
+.skill-tile .fa-html5 {
+    color: #e34f26;
+}
+
+.skill-tile .fa-css3-alt {
+    color: #1572b6;
+}
+
+.skill-tile .fa-js {
+    color: #f7df1e;
+}
+
+.skill-tile .fa-python {
+    color: #3776ab;
+}
+
+.skill-tile .fa-github {
+    color: #ffffff;
+}
+
+.skill-tile .devicon-git-plain {
+    color: #ffffff;
+}
+
+
+
+
+
+.skill-tile .devicon-flutter-plain {
+    color: #53a6e1;
+}
+
+.skill-tile .devicon-dart-plain {
+    color: #36c9ee;
+}
+
+.skill-tile .devicon-firebase-plain {
+    color: #cb7838;
+}
+
+
+
+@media (max-width: 480px) {
+
+    /* Skills section spacing */
+    .skills {
+        padding: 10px 6% 10px;
+
+    }
+
+    /* Heading */
+    .skills h2 {
+        font-size: 2.4rem;
+        margin-bottom: 3.5rem;
+    }
+
+    /* Grid: 1 column on mobile */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+
+    /* Skill tile */
+    .skill-tile {
+        height: 140px;
+        border-radius: 16px;
+        font-size: 1.3rem;
+        gap: 1rem;
+    }
+
+    /* Icons */
+    .skill-tile i {
+        font-size: 3.2rem;
+    }
+}
